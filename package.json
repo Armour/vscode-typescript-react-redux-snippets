@@ -6,7 +6,7 @@
   "scripts": {
     "test": "gulp"
   },
-  "repository": "git@github.com:Armour/Atom-Typescript-React-Redux-Snippets.git",
+  "repository": "git@github.com:Armour/atom-typescript-react-redux-snippets.git",
   "keywords": [
     "typescript",
     "react",
@@ -19,9 +19,9 @@
     "atom": ">0.50.0"
   },
   "bugs": {
-    "url": "https://github.com/Armour/Atom-Typescript-React-Redux-Snippets/issues"
+    "url": "https://github.com/Armour/atom-typescript-react-redux-snippets/issues"
   },
-  "homepage": "https://github.com/Armour/Atom-Typescript-React-Redux-Snippets",
+  "homepage": "https://github.com/Armour/atom-typescript-react-redux-snippets",
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^15.0.10",

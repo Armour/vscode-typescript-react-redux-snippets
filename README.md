@@ -1,5 +1,7 @@
 # Atom-Typescript-React-Redux-Snippets
 
+[![Dependency Status](https://gemnasium.com/badges/9edefff585cfc569f3eb614bc63425b9.svg)](https://gemnasium.com/github.com/Armour/atom-typescript-react-redux-snippets)
+
 Typescript, React and Redux snippets for Atom (follow ES6 standard)
 
 
@@ -107,6 +109,26 @@ export default connect(
 Search for `atom-typescript-react-redux-snippets` in `Install` page
 
 Install and Restart Atom
+
+
+# Development
+
+```bash
+$ cd ~/.atom/packages
+$ git clone https://github.com/Armour/atom-typescript-react-redux-snippets
+$ cd atom-typescript-react-redux-snippets
+$ apm install
+$ apm link
+```
+
+
+# Contributing
+
+1. Fork this repo.
+2. Create your own branch: git checkout -b feature/my-feature
+3. Commit your changes: git commit -m 'add some new feature'
+4. Push to your branch: git push origin feature/my-feature
+5. Send me a pull request :)
 
 
 # License 

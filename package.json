@@ -1,0 +1,48 @@
+{
+  "name": "atom-typescript-react-redux-snippets",
+  "version": "0.1.0",
+  "description": "Typescript, React and Redux snippets for Atom (follow ES6 standard)",
+  "author": "Chong Guo <cguo@azendless.com>",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": "git@github.com:Armour/Atom-Typescript-React-Redux-Snippets.git",
+  "keywords": [
+    "typescript",
+    "react",
+    "react router",
+    "redux",
+    "snippets",
+    "es6"
+  ],
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Armour/Atom-Typescript-React-Redux-Snippets/issues"
+  },
+  "homepage": "https://github.com/Armour/Atom-Typescript-React-Redux-Snippets",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^15.0.10",
+    "@types/react-dom": "^0.14.23",
+    "@types/react-redux": "^4.4.36",
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-tslint": "^7.1.0",
+    "run-sequence": "^1.2.2",
+    "tslint": "^4.4.2",
+    "typescript": "^2.1.6"
+  }
+}

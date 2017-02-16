@@ -1,0 +1,96 @@
+'.source.tsx':
+  'Typescript-React: basic react template (2 spaces indent)':
+    'prefix': 'tsr'
+    'body': '''
+      import React from "react";
+
+      interface I${1:ComponentName}Props {};
+
+      interface I${1:ComponentName}State {};
+
+      class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+        public render() {
+          return (<span>Body</span>);
+        }
+      }
+
+      export default ${1:ComponentName};
+    '''
+
+  'Typescript-React: basic react template (4 spaces indent)':
+    'prefix': 'tsr4'
+    'body': '''
+      import React from "react";
+
+      interface I${1:ComponentName}Props {};
+
+      interface I${1:ComponentName}State {};
+
+      class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+          public render() {
+              return (<span>Body</span>);
+          }
+      }
+
+      export default ${1:ComponentName};
+    '''
+
+  'Typescript-React: react redux template (2 spaces indent)':
+    'prefix': 'tsrr'
+    'body': '''
+      import React from "react";
+      import { connect } from "react-redux";
+
+      interface I${1:ComponentName}Props {};
+
+      interface I${1:ComponentName}State {};
+
+      class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+        public render() {
+          return (<span>Body</span>);
+        }
+      }
+
+      const mapStateToProps = (state) => ({
+        // ..mapStateToProps
+      });
+
+      const mapDispatchToProps = (dispatch) => ({
+        // ..mapDispatchToProps
+      });
+
+      export default connect(
+        mapStateToProps,
+        mapDispatchToProps,
+      )(${1:ComponentName});
+    '''
+
+  'Typescript-React: react redux template (4 spaces indent)':
+    'prefix': 'tsrr4'
+    'body': '''
+      import React from "react";
+      import { connect } from "react-redux";
+
+      interface I${1:ComponentName}Props {};
+
+      interface I${1:ComponentName}State {};
+
+      class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+          public render() {
+              return (<span>Body</span>);
+          }
+      }
+
+      const mapStateToProps = (state) => ({
+          // ..mapStateToProps
+      });
+
+      const mapDispatchToProps = (dispatch) => ({
+          // ..mapDispatchToProps
+      });
+
+      export default connect(
+          mapStateToProps,
+          mapDispatchToProps,
+      )(${1:ComponentName});
+    '''

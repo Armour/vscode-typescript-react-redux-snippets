@@ -44,7 +44,7 @@ class ComponentName extends React.Component<IComponentNameProps, IComponentNameS
 export default ComponentName;
 ```
 
-* **tsr4** : typescript react redux snippet
+* **tsrr** : typescript react redux snippet
 
 ```tsx
 import React from "react";
@@ -74,7 +74,7 @@ export default connect(
 )(ComponentName);
 ```
 
-* **tsr4r** : typescript react redux snippet with 4 spaces indent
+* **tsrr4** : typescript react redux snippet with 4 spaces indent
 
 ```tsx
 import React from "react";

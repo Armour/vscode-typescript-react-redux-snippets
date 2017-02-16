@@ -6,7 +6,10 @@
   "scripts": {
     "test": "gulp"
   },
-  "repository": "git@github.com:Armour/atom-typescript-react-redux-snippets.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Armour/atom-typescript-react-redux-snippets.git"
+  },
   "keywords": [
     "typescript",
     "react",

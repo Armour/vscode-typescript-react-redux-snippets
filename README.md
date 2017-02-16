@@ -1,5 +1,6 @@
 # Atom-Typescript-React-Redux-Snippets
 
+[![Build Status](https://travis-ci.org/Armour/atom-typescript-react-redux-snippets.svg?branch=master)](https://travis-ci.org/Armour/atom-typescript-react-redux-snippets)
 [![Dependency Status](https://gemnasium.com/badges/github.com/Armour/atom-typescript-react-redux-snippets.svg)](https://gemnasium.com/github.com/Armour/atom-typescript-react-redux-snippets)
 
 Typescript, React and Redux snippets for Atom (follow ES6 standard)

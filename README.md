@@ -10,101 +10,173 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
 
 * **tsr** : basic typescript react snippet
 
-```tsx
-import React from "react";
+  ```tsx
+  import React from "react";
 
-interface IComponentNameProps {};
+  interface IComponentNameProps {};
 
-interface IComponentNameState {};
+  interface IComponentNameState {};
 
-class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
-  public render() {
-    return (<span>Body</span>);
+  class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
+    public render() {
+      return (<span>Body</span>);
+    }
   }
-}
 
-export default ComponentName;
-```
+  export default ComponentName;
+  ```
 
 * **tsr4** : basic typescript react snippet with 4 spaces indent
 
-```tsx
-import React from "react";
+  ```tsx
+  import React from "react";
 
-interface IComponentNameProps {};
+  interface IComponentNameProps {};
 
-interface IComponentNameState {};
+  interface IComponentNameState {};
 
-class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
-    public render() {
-        return (<span>Body</span>);
-    }
-}
+  class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
+      public render() {
+          return (<span>Body</span>);
+      }
+  }
 
-export default ComponentName;
-```
+  export default ComponentName;
+  ```
 
 * **tsrr** : typescript react redux snippet
 
-```tsx
-import React from "react";
-import { connect } from "react-redux";
+  ```tsx
+  import React from "react";
+  import { connect } from "react-redux";
 
-interface IComponentNameProps {};
+  interface IComponentNameProps {};
 
-interface IComponentNameState {};
+  interface IComponentNameState {};
 
-class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
-  public render() {
-    return (<span>Body</span>);
+  class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
+    public render() {
+      return (<span>Body</span>);
+    }
   }
-}
 
-const mapStateToProps = (state) => ({
-  // ..mapStateToProps
-});
+  const mapStateToProps = (state) => ({
+    // ..mapStateToProps
+  });
 
-const mapDispatchToProps = (dispatch) => ({
-  // ..mapDispatchToProps
-});
+  const mapDispatchToProps = (dispatch) => ({
+    // ..mapDispatchToProps
+  });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(ComponentName);
-```
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(ComponentName);
+  ```
 
 * **tsrr4** : typescript react redux snippet with 4 spaces indent
 
-```tsx
-import React from "react";
-import { connect } from "react-redux";
+  ```tsx
+  import React from "react";
+  import { connect } from "react-redux";
 
-interface IComponentNameProps {};
+  interface IComponentNameProps {};
 
-interface IComponentNameState {};
+  interface IComponentNameState {};
 
-class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
-    public render() {
-        return (<span>Body</span>);
-    }
-}
+  class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
+      public render() {
+          return (<span>Body</span>);
+      }
+  }
 
-const mapStateToProps = (state) => ({
-    // ..mapStateToProps
-});
+  const mapStateToProps = (state) => ({
+      // ..mapStateToProps
+  });
 
-const mapDispatchToProps = (dispatch) => ({
-    // ..mapDispatchToProps
-});
+  const mapDispatchToProps = (dispatch) => ({
+      // ..mapDispatchToProps
+  });
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(ComponentName);
-```
+  export default connect(
+      mapStateToProps,
+      mapDispatchToProps,
+  )(ComponentName);
+  ```
 
+* **cdm** : componentDidMount
 
+  ```tsx
+  public componentDidMount() {
+    {1}
+  }
+  ${2}
+  ```
+
+* **cdm4** : componentDidMount with 4 spaces indent
+
+  ```tsx
+  public componentDidMount() {
+      {1}
+  }
+  ${2}
+  ```
+
+* **cdu** : componentDidUnmount
+
+  ```tsx
+  public componentDidUnmount() {
+    {1}
+  }
+  ${2}
+  ```
+
+* **cdu4** : componentDidUnmount with 4 spaces indent
+
+  ```tsx
+  public componentDidUnmount() {
+      {1}
+  }
+  ${2}
+  ```
+
+* **cwm** : componentWillMount
+
+  ```tsx
+  public componentWillMount() {
+    {1}
+  }
+  ${2}
+  ```
+  
+* **cwm4** : componentWillMount with 4 spaces indent
+
+  ```tsx
+  public componentWillMount() {
+      {1}
+  }
+  ${2}
+  ```
+  
+* **cwu** : componentWillUnmount
+
+  ```tsx
+  public componentWillUnmount() {
+    {1}
+  }
+  ${2}
+  ```
+  
+* **cwu4** : componentWillUnmount with 4 spaces indent
+
+  ```tsx
+  public componentWillUnmount() {
+      {1}
+  }
+  ${2}
+  ```
+  
+  
 # Install
 
 Search for `atom-typescript-react-redux-snippets` in `Install` page

@@ -94,3 +94,67 @@
           mapDispatchToProps,
       )(${1:ComponentName});
     '''
+  'Typescript-React: componentDidMount':
+    'prefix': 'cdm'
+    'body': '''
+      public componentDidMount() {
+        ${1}
+      }
+      ${2}
+    '''
+  'Typescript-React: componentDidMount (4 spaces indent)':
+    'prefix': 'cdm4'
+    'body': '''
+      public componentDidMount() {
+          ${1}
+      }
+      ${2}
+    '''
+  'Typescript-React: componentDidUnmount':
+    'prefix': 'cdu'
+    'body': '''
+      public componentDidUnmount() {
+        ${1}
+      }
+      ${2}
+    '''
+  'Typescript-React: componentDidUnmount (4 spaces indent)':
+    'prefix': 'cdu4'
+    'body': '''
+      public componentDidUnmount() {
+          ${1}
+      }
+      ${2}
+    '''
+  'Typescript-React: componentWillMount':
+    'prefix': 'cwm'
+    'body': '''
+      public componentWillMount() {
+        ${1}
+      }
+      ${2}
+    '''
+  'Typescript-React: componentWillMount (4 spaces indent)':
+    'prefix': 'cwm4'
+    'body': '''
+      public componentWillMount() {
+          ${1}
+      }
+      ${2}
+    '''
+  'Typescript-React: componentWillUnmount':
+    'prefix': 'cwu'
+    'body': '''
+      public componentWillUnmount() {
+        ${1}
+      }
+      ${2}
+    '''
+  'Typescript-React: componentWillUnmount (4 spaces indent)':
+    'prefix': 'cwu4'
+    'body': '''
+      public componentWillUnmount() {
+          ${1}
+      }
+      ${2}
+    '''

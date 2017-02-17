@@ -11,52 +11,58 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
 * **tsr** : basic typescript react snippet
 
   ```tsx
-  import React from "react";
+  import React from 'react';
 
-  interface IComponentNameProps {};
+  interface I${1:ComponentName}Props {}
 
-  interface IComponentNameState {};
+  interface I${1:ComponentName}State {}
 
-  class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
+  class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
     public render() {
-      return (<span>Body</span>);
+      return (
+        ${2:<span>Body</span>}
+      );
     }
   }
 
-  export default ComponentName;
+  export default ${1:ComponentName};
   ```
 
 * **tsr4** : basic typescript react snippet with 4 spaces indent
 
   ```tsx
-  import React from "react";
+  import React from 'react';
 
-  interface IComponentNameProps {};
+  interface I${1:ComponentName}Props {}
 
-  interface IComponentNameState {};
+  interface I${1:ComponentName}State {}
 
-  class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
+  class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
       public render() {
-          return (<span>Body</span>);
+          return (
+            ${2:<span>Body</span>}
+          );
       }
   }
 
-  export default ComponentName;
+  export default ${1:ComponentName};
   ```
 
 * **tsrr** : typescript react redux snippet
 
   ```tsx
-  import React from "react";
-  import { connect } from "react-redux";
+  import React from 'react';
+  import { connect } from 'react-redux';
 
-  interface IComponentNameProps {};
+  interface I${1:ComponentName}Props {}
 
-  interface IComponentNameState {};
+  interface I${1:ComponentName}State {}
 
-  class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
+  class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
     public render() {
-      return (<span>Body</span>);
+      return (
+        ${2:<span>Body</span>}
+      );
     }
   }
 
@@ -71,22 +77,24 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
   export default connect(
     mapStateToProps,
     mapDispatchToProps,
-  )(ComponentName);
+  )(${1:ComponentName});
   ```
 
 * **tsrr4** : typescript react redux snippet with 4 spaces indent
 
   ```tsx
-  import React from "react";
-  import { connect } from "react-redux";
+  import React from 'react';
+  import { connect } from 'react-redux';
 
-  interface IComponentNameProps {};
+  interface I${1:ComponentName}Props {}
 
-  interface IComponentNameState {};
+  interface I${1:ComponentName}State {}
 
-  class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
+  class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
       public render() {
-          return (<span>Body</span>);
+          return (
+            ${2:<span>Body</span>}
+          );
       }
   }
 
@@ -101,7 +109,7 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
   export default connect(
       mapStateToProps,
       mapDispatchToProps,
-  )(ComponentName);
+  )(${1:ComponentName});
   ```
 
 * **cdm** : componentDidMount

@@ -46,6 +46,8 @@
     "gulp-tslint": "^7.1.0",
     "run-sequence": "^1.2.2",
     "tslint": "^4.4.2",
+    "tslint-eslint-rules": "^3.4.0",
+    "tslint-react": "^2.4.0",
     "typescript": "^2.1.6"
   }
 }

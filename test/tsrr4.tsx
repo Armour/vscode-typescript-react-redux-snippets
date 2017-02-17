@@ -1,9 +1,9 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from 'react';
+import { connect } from 'react-redux';
 
-interface IComponentNameProps {};
+interface IComponentNameProps {}
 
-interface IComponentNameState {};
+interface IComponentNameState {}
 
 class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
     public render() {

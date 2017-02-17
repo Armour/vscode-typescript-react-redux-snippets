@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-interface IComponentNameProps {};
+interface IComponentNameProps {}
 
-interface IComponentNameState {};
+interface IComponentNameState {}
 
 class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
     public render() {

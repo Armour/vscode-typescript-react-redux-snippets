@@ -1,7 +1,9 @@
 # Atom-Typescript-React-Redux-Snippets
 
 [![Build Status](https://travis-ci.org/Armour/atom-typescript-react-redux-snippets.svg?branch=master)](https://travis-ci.org/Armour/atom-typescript-react-redux-snippets)
-[![Dependency Status](https://gemnasium.com/badges/github.com/Armour/atom-typescript-react-redux-snippets.svg)](https://gemnasium.com/github.com/Armour/atom-typescript-react-redux-snippets)
+[![Dependencies Status](https://david-dm.org/Armour/atom-typescript-react-redux-snippets/status.svg)](https://david-dm.org/Armour/atom-typescript-react-redux-snippets)
+[![DevDependencies Status](https://david-dm.org/Armour/atom-typescript-react-redux-snippets/dev-status.svg)](https://david-dm.org/Armour/atom-typescript-react-redux-snippets?type=dev)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
 Typescript, React and Redux snippets for Atom (follows ES6 standard)
 

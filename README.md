@@ -67,7 +67,7 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
   class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
     public render() {
       return (
-        ${2:<span>Body</span>}
+        ${3:<span>Body</span>}
       );
     }
   }
@@ -107,7 +107,7 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
   class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
       public render() {
           return (
-            ${2:<span>Body</span>}
+            ${3:<span>Body</span>}
           );
       }
   }

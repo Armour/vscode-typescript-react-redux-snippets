@@ -10,7 +10,7 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
 
 # Snippets
 
-* **tsr** : basic typescript react snippet
+* **_tsr** : basic typescript react template (2 spaces)
 
   ```tsx
   import React from 'react';
@@ -30,7 +30,7 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
   export default ${1:ComponentName};
   ```
 
-* **tsr4** : basic typescript react snippet with 4 spaces indent
+* **_tsr4** : basic typescript react template (4 spaces)
 
   ```tsx
   import React from 'react';
@@ -50,13 +50,17 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
   export default ${1:ComponentName};
   ```
 
-* **tsrr** : typescript react redux snippet
+* **_tsrr** : typescript react redux template (2 spaces)
 
   ```tsx
   import React from 'react';
-  import { connect } from 'react-redux';
+  import { connect, Dispatch } from 'react-redux';
 
-  interface I${1:ComponentName}Props {}
+  interface I${1:ComponentName}StateProps {}
+
+  interface I${1:ComponentName}DispatchProps {}
+
+  type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;
 
   interface I${1:ComponentName}State {}
 
@@ -68,13 +72,17 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
     }
   }
 
-  const mapStateToProps = (state) => ({
-    // ..mapStateToProps
-  });
+  const mapStateToProps = (state: ${2:any}): I${1:ComponentName}StateProps => {
+    return {
+      // ...mapStateToProps
+    };
+  };
 
-  const mapDispatchToProps = (dispatch) => ({
-    // ..mapDispatchToProps
-  });
+  const mapDispatchToProps = (dispatch: Dispatch<${2:any}>): I${1:ComponentName}DispatchProps => {
+    return {
+      // ...mapDispatchToProps
+    };
+  };
 
   export default connect(
     mapStateToProps,
@@ -82,13 +90,17 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
   )(${1:ComponentName});
   ```
 
-* **tsrr4** : typescript react redux snippet with 4 spaces indent
+* **_tsrr4** : typescript react redux template (4 spaces)
 
   ```tsx
   import React from 'react';
-  import { connect } from 'react-redux';
+  import { connect, Dispatch } from 'react-redux';
 
-  interface I${1:ComponentName}Props {}
+  interface I${1:ComponentName}StateProps {}
+
+  interface I${1:ComponentName}DispatchProps {}
+
+  type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;
 
   interface I${1:ComponentName}State {}
 
@@ -100,13 +112,17 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
       }
   }
 
-  const mapStateToProps = (state) => ({
-      // ..mapStateToProps
-  });
+  const mapStateToProps = (state: ${2:any}): I${1:ComponentName}StateProps => {
+      return {
+          // ...mapStateToProps
+      };
+  };
 
-  const mapDispatchToProps = (dispatch) => ({
-      // ..mapDispatchToProps
-  });
+  const mapDispatchToProps = (dispatch: Dispatch<${2:any}>): I${1:ComponentName}DispatchProps => {
+      return {
+          // ...mapDispatchToProps
+      };
+  };
 
   export default connect(
       mapStateToProps,
@@ -114,7 +130,45 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
   )(${1:ComponentName});
   ```
 
-* **cdm** : componentDidMount
+* **_con** : constructor (2 spaces)
+
+  ```tsx
+  constructor(props: I${1:ComponentName}Props) {
+    super(props);
+    ${2}
+  }
+  ${3}
+  ```
+
+* **_con4** : constructor (4 spaces)
+
+  ```tsx
+  constructor(props: I${1:ComponentName}Props) {
+      super(props);
+      ${2}
+  }
+  ${3}
+  ```
+
+* **_cwm** : componentWillMount (2 spaces)
+
+  ```tsx
+  public componentWillMount() {
+    {1}
+  }
+  ${2}
+  ```
+
+* **_cwm4** : componentWillMount (4 spaces)
+
+  ```tsx
+  public componentWillMount() {
+      {1}
+  }
+  ${2}
+  ```
+
+* **_cdm** : componentDidMount (2 spaces)
 
   ```tsx
   public componentDidMount() {
@@ -123,7 +177,7 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
   ${2}
   ```
 
-* **cdm4** : componentDidMount with 4 spaces indent
+* **_cdm4** : componentDidMount (4 spaces)
 
   ```tsx
   public componentDidMount() {
@@ -132,43 +186,79 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
   ${2}
   ```
 
-* **cdu** : componentDidUnmount
+* **_cwrp** : componentWillReceiveProps (2 spaces)
 
   ```tsx
-  public componentDidUnmount() {
-    {1}
+  public componentWillReceiveProps(nextProps: I${1:ComponentName}Props) {
+    ${2}
   }
-  ${2}
+  ${3}
   ```
 
-* **cdu4** : componentDidUnmount with 4 spaces indent
+* **_cwrp4** : componentWillReceiveProps (4 spaces)
 
   ```tsx
-  public componentDidUnmount() {
-      {1}
+  public componentWillReceiveProps(nextProps: I${1:ComponentName}Props) {
+      ${2}
   }
-  ${2}
+  ${3}
   ```
 
-* **cwm** : componentWillMount
-
-  ```tsx
-  public componentWillMount() {
-    {1}
-  }
-  ${2}
-  ```
-  
-* **cwm4** : componentWillMount with 4 spaces indent
+* **_scu** : shouldComponentUpdate (2 spaces)
 
   ```tsx
-  public componentWillMount() {
-      {1}
+  public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
+    ${2}
   }
-  ${2}
+  ${3}
   ```
-  
-* **cwu** : componentWillUnmount
+
+* **_scu4** : shouldComponentUpdate (4 spaces)
+
+  ```tsx
+  public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
+      ${2}
+  }
+  ${3}
+  ```
+
+* **_cwu** : componentWillUpdate (2 spaces)
+
+  ```tsx
+  public componentWillUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
+    ${2}
+  }
+  ${3}
+  ```
+
+* **_cwu4** : componentWillUpdate (4 spaces)
+
+  ```tsx
+  public componentWillUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
+      ${2}
+  }
+  ${3}
+  ```
+
+* **_cdu** : componentDidUpdate (2 spaces)
+
+  ```tsx
+  public componentDidUpdate(prevProps: I${1:ComponentName}Props, prevState: I${1:ComponentName}State) {
+    ${2}
+  }
+  ${3}
+  ```
+
+* **_cdu4** : componentDidUpdate (4 spaces)
+
+  ```tsx
+  public componentDidUpdate(prevProps: I${1:ComponentName}Props, prevState: I${1:ComponentName}State) {
+      ${2}
+  }
+  ${3}
+  ```
+
+* **_cwun** : componentWillUnmount (2 spaces)
 
   ```tsx
   public componentWillUnmount() {
@@ -176,8 +266,8 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
   }
   ${2}
   ```
-  
-* **cwu4** : componentWillUnmount with 4 spaces indent
+
+* **_cwun4** : componentWillUnmount (4 spaces)
 
   ```tsx
   public componentWillUnmount() {
@@ -185,8 +275,8 @@ Typescript, React and Redux snippets for Atom (follows ES6 standard)
   }
   ${2}
   ```
-  
-  
+
+
 # Install
 
 Search for `atom-typescript-react-redux-snippets` in `Install` page

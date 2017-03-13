@@ -16,10 +16,7 @@
     "no-extra-semi": true, // Disallow unnecessary semicolons
     "no-invalid-regexp": true, // Disallow invalid regular expression strings in the RegExp constructor
     "only-arrow-functions": true, // Disallows traditional (non-arrow) function expressions
-    "ordered-imports": [true, {
-      "import-sources-order": "lowercase-first",
-      "named-imports-order": "lowercase-last"
-    }], // Requires that import statements be alphabetized
+    "ordered-imports": true, // Requires that import statements be alphabetized
     "quotemark": [true, "single", "jsx-double"], // Enfore single quote for tsx and double quote for jsx part
     "switch-default": true, // Require a default case in all switch statements
     "triple-equals": [true, "allow-null-check"], // Requires === and !== in place of == and !=

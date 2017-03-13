@@ -7,7 +7,7 @@ interface IComponentNameState {}
 class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
     public render() {
         return (
-            <span>Body</span>
+          <span>Body</span>
         );
     }
 }

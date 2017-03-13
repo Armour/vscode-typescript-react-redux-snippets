@@ -1,7 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect, Dispatch } from 'react-redux';
 
-interface IComponentNameProps {}
+interface IComponentNameStateProps {}
+
+interface IComponentNameDispatchProps {}
+
+type IComponentNameProps = IComponentNameStateProps & IComponentNameDispatchProps;
 
 interface IComponentNameState {}
 
@@ -13,13 +17,17 @@ class ComponentName extends React.Component<IComponentNameProps, IComponentNameS
   }
 }
 
-const mapStateToProps = (state) => ({
-  // ..mapStateToProps
-});
+const mapStateToProps = (state: any): IComponentNameStateProps => {
+  return {
+    // ...mapStateToProps
+  };
+};
 
-const mapDispatchToProps = (dispatch) => ({
-  // ..mapDispatchToProps
-});
+const mapDispatchToProps = (dispatch: Dispatch<any>): IComponentNameDispatchProps => {
+  return {
+    // ...mapDispatchToProps
+  };
+};
 
 export default connect(
   mapStateToProps,

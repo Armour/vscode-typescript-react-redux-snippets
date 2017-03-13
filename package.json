@@ -16,7 +16,8 @@
     "react router",
     "redux",
     "snippets",
-    "es6"
+    "es6",
+    "atom"
   ],
   "engines": {
     "atom": ">0.50.0"

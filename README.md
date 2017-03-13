@@ -5,7 +5,7 @@
 [![DevDependencies Status](https://david-dm.org/Armour/atom-typescript-react-redux-snippets/dev-status.svg)](https://david-dm.org/Armour/atom-typescript-react-redux-snippets?type=dev)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
-Typescript, React and Redux snippets for Atom (follows ES6 standard)
+Typescript, React and Redux snippets for Atom (followed ES6 standard)
 
 
 # Snippets

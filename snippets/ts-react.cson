@@ -56,7 +56,7 @@
       class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
         public render() {
           return (
-            ${2:<span>Body</span>}
+            ${3:<span>Body</span>}
           );
         }
       }
@@ -96,7 +96,7 @@
       class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
           public render() {
               return (
-                ${2:<span>Body</span>}
+                ${3:<span>Body</span>}
               );
           }
       }

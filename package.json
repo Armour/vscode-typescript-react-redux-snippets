@@ -1,6 +1,6 @@
 {
   "name": "atom-typescript-react-redux-snippets",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Typescript, React and Redux snippets for Atom (follow ES6 standard)",
   "author": "Chong Guo <cguo@azendless.com>",
   "scripts": {

@@ -1,32 +1,37 @@
 {
-  "name": "atom-typescript-react-redux-snippets",
+  "name": "vscode-typescript-react-redux-snippets",
   "version": "0.3.2",
-  "description": "Typescript, React and Redux snippets for Atom (follow ES6 standard)",
+  "description": "Typescript React Redux snippets (follow ES6 standard)",
+  "publisher": "chong",
+  "categories": [
+    "Snippets"
+  ],
   "author": "Chong Guo <cguo@azendless.com>",
   "scripts": {
     "test": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Armour/atom-typescript-react-redux-snippets.git"
+    "url": "https://github.com/Armour/vscode-typescript-react-redux-snippets.git"
   },
   "keywords": [
     "typescript",
     "react",
-    "react router",
     "redux",
-    "snippets",
     "es6",
-    "atom"
+    "snippets"
   ],
+  "icon": "images/react.png",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">0.50.0",
+    "vscode": "^0.10.0"
   },
   "bugs": {
-    "url": "https://github.com/Armour/atom-typescript-react-redux-snippets/issues"
+    "url": "https://github.com/Armour/vscode-typescript-react-redux-snippets/issues"
   },
-  "homepage": "https://github.com/Armour/atom-typescript-react-redux-snippets",
+  "homepage": "https://github.com/Armour/vscode-typescript-react-redux-snippets",
   "license": "MIT",
+  "displayName": "Typescript React Redux Snippets",
   "devDependencies": {
     "@types/react": "^15.0.16",
     "@types/react-dom": "^0.14.23",

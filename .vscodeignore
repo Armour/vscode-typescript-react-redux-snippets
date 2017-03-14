@@ -1,0 +1,13 @@
+.vscode/
+node_moduels/
+test/
+.babelrc
+.editorconfig
+.eslintignore
+.eslintrc
+.gitignore
+.travis.yml
+gulpfile.babel.js
+tsconfig.json
+tslint.json
+yarn.lock

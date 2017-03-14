@@ -1,11 +1,11 @@
-# Atom-Typescript-React-Redux-Snippets
+# VSCode-Typescript-React-Redux-Snippets
 
-[![Build Status](https://travis-ci.org/Armour/atom-typescript-react-redux-snippets.svg?branch=master)](https://travis-ci.org/Armour/atom-typescript-react-redux-snippets)
-[![Dependencies Status](https://david-dm.org/Armour/atom-typescript-react-redux-snippets/status.svg)](https://david-dm.org/Armour/atom-typescript-react-redux-snippets)
-[![DevDependencies Status](https://david-dm.org/Armour/atom-typescript-react-redux-snippets/dev-status.svg)](https://david-dm.org/Armour/atom-typescript-react-redux-snippets?type=dev)
+[![Build Status](https://travis-ci.org/Armour/vscode-typescript-react-redux-snippets.svg?branch=master)](https://travis-ci.org/Armour/vscode-typescript-react-redux-snippets)
+[![Dependencies Status](https://david-dm.org/Armour/vscode-typescript-react-redux-snippets/status.svg)](https://david-dm.org/Armour/vscode-typescript-react-redux-snippets)
+[![DevDependencies Status](https://david-dm.org/Armour/vscode-typescript-react-redux-snippets/dev-status.svg)](https://david-dm.org/Armour/vscode-typescript-react-redux-snippets?type=dev)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
-Typescript, React and Redux snippets for Atom (followed ES6 standard)
+Typescript, React and Redux snippets for VSCode (followed ES6 standard)
 
 
 # Snippets
@@ -300,20 +300,20 @@ Typescript, React and Redux snippets for Atom (followed ES6 standard)
 
 # Install
 
-Search for `atom-typescript-react-redux-snippets` in `Install` page
+Search for `vscode-typescript-react-redux-snippets` in Marketplace
 
-Install and Restart Atom
+Install and reload VSCode
 
 
 # Development
 
 ```bash
-$ cd ~/.atom/packages
-$ git clone https://github.com/Armour/atom-typescript-react-redux-snippets
-$ cd atom-typescript-react-redux-snippets
-$ apm install
-$ apm link
+$ cd ~/.vscode/extensions
+$ git clone https://github.com/Armour/vscode-typescript-react-redux-snippets
+$ cd vscode-typescript-react-redux-snippets
 ```
+
+This will load our snippets each time VS Code runs
 
 
 # Contributing

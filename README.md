@@ -300,9 +300,11 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
 
 # Install
 
-Search for `vscode-typescript-react-redux-snippets` in Marketplace
+Launch VS Code Quick Open (⌘+P), paste the following command, and press enter.
 
-Install and reload VSCode
+~~~
+ext install vscode-typescript-react-redux-snippets
+~~~
 
 
 # Development

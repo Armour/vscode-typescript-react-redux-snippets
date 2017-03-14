@@ -1,71 +1,71 @@
 {
-  "name": "vscode-typescript-react-redux-snippets",
-  "version": "0.3.2",
-  "description": "Typescript React Redux snippets (follow ES6 standard)",
-  "publisher": "chong",
-  "categories": [
-    "Snippets"
-  ],
-  "author": "Chong Guo <cguo@azendless.com>",
-  "scripts": {
-    "test": "gulp"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Armour/vscode-typescript-react-redux-snippets.git"
-  },
-  "keywords": [
-    "typescript",
-    "react",
-    "redux",
-    "es6",
-    "snippets"
-  ],
-  "icon": "images/react.png",
-  "engines": {
-    "atom": ">0.50.0",
-    "vscode": "^0.10.0"
-  },
-  "bugs": {
-    "url": "https://github.com/Armour/vscode-typescript-react-redux-snippets/issues"
-  },
-  "homepage": "https://github.com/Armour/vscode-typescript-react-redux-snippets",
-  "contributes": {
-    "snippets": [
-      {
-        "language": "typescript",
-        "path": "./snippets/ts-react.json"
-      },
-      {
-        "language": "typescriptreact",
-        "path": "./snippets/ts-react.json"
-      }
-    ]
-  },
-  "license": "MIT",
-  "displayName": "Typescript React Redux Snippets",
-  "devDependencies": {
-    "@types/react": "^15.0.16",
-    "@types/react-dom": "^0.14.23",
-    "@types/react-redux": "^4.4.37",
-    "babel-cli": "^6.24.0",
-    "babel-core": "^6.24.0",
-    "babel-eslint": "^7.1.1",
-    "babel-preset-es2015": "^6.24.0",
-    "babel-preset-react": "^6.23.0",
-    "babel-preset-stage-2": "^6.22.0",
-    "eslint": "^3.17.1",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1",
-    "gulp-tslint": "^7.1.0",
-    "run-sequence": "^1.2.2",
-    "tslint": "^4.5.1",
-    "tslint-eslint-rules": "^3.4.0",
-    "tslint-react": "^2.5.0",
-    "typescript": "^2.2.1"
-  }
+    "name": "vscode-typescript-react-redux-snippets",
+    "version": "0.3.3",
+    "description": "Typescript React Redux snippets (follow ES6 standard)",
+    "publisher": "chong",
+    "categories": [
+        "Snippets"
+    ],
+    "author": "Chong Guo <cguo@azendless.com>",
+    "scripts": {
+        "test": "gulp"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Armour/vscode-typescript-react-redux-snippets.git"
+    },
+    "keywords": [
+        "typescript",
+        "react",
+        "redux",
+        "es6",
+        "snippets"
+    ],
+    "icon": "images/react.png",
+    "engines": {
+        "atom": ">0.50.0",
+        "vscode": "^0.10.0"
+    },
+    "bugs": {
+        "url": "https://github.com/Armour/vscode-typescript-react-redux-snippets/issues"
+    },
+    "homepage": "https://github.com/Armour/vscode-typescript-react-redux-snippets",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "typescript",
+                "path": "./snippets/ts-react.json"
+            },
+            {
+                "language": "typescriptreact",
+                "path": "./snippets/ts-react.json"
+            }
+        ]
+    },
+    "license": "MIT",
+    "displayName": "Typescript React Redux Snippets",
+    "devDependencies": {
+        "@types/react": "^15.0.16",
+        "@types/react-dom": "^0.14.23",
+        "@types/react-redux": "^4.4.37",
+        "babel-cli": "^6.24.0",
+        "babel-core": "^6.24.0",
+        "babel-eslint": "^7.1.1",
+        "babel-preset-es2015": "^6.24.0",
+        "babel-preset-react": "^6.23.0",
+        "babel-preset-stage-2": "^6.22.0",
+        "eslint": "^3.17.1",
+        "eslint-config-airbnb": "^14.1.0",
+        "eslint-plugin-import": "^2.2.0",
+        "eslint-plugin-jsx-a11y": "^4.0.0",
+        "eslint-plugin-react": "^6.10.0",
+        "gulp": "^3.9.1",
+        "gulp-eslint": "^3.0.1",
+        "gulp-tslint": "^7.1.0",
+        "run-sequence": "^1.2.2",
+        "tslint": "^4.5.1",
+        "tslint-eslint-rules": "^3.4.0",
+        "tslint-react": "^2.5.0",
+        "typescript": "^2.2.1"
+    }
 }

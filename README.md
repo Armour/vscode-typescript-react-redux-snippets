@@ -325,6 +325,11 @@ This will load our snippets each time VS Code runs
 5. Send me a pull request :)
 
 
+# Others
+
+If you want to use Atom, check my [another repo](https://github.com/Armour/atom-typescript-react-redux-snippets).
+
+
 # License 
 
 MIT License

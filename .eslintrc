@@ -15,6 +15,6 @@
     "import/no-commonjs": 2, // Report CommonJS require calls and module.exports or exports.*
     "import/no-deprecated": 1, // Report imported names marked with @deprecated documentation tag
     "import/no-duplicates": 2, // Report repeated import of the same module in multiple places
-    "import/no-unresolved": 2, // Ensure imports point to a file/module that can be resolved
+    "import/no-unresolved": 2 // Ensure imports point to a file/module that can be resolved
   }
 }

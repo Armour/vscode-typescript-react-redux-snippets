@@ -176,7 +176,7 @@
     '''
 
   'Typescript-React: componentWillReceiveProps (2 spaces)':
-    'prefix': '_cwrp'
+    'prefix': '_cwr'
     'body': '''
       public componentWillReceiveProps(nextProps: I${1:ComponentName}Props) {
         ${2}
@@ -185,7 +185,7 @@
     '''
 
   'Typescript-React: componentWillReceiveProps (4 spaces)':
-    'prefix': '_cwrp4'
+    'prefix': '_cwr4'
     'body': '''
       public componentWillReceiveProps(nextProps: I${1:ComponentName}Props) {
           ${2}
@@ -194,7 +194,7 @@
     '''
 
   'Typescript-React: shouldComponentUpdate (2 spaces)':
-    'prefix': '_scu'
+    'prefix': '_scup'
     'body': '''
       public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
         ${2}
@@ -203,7 +203,7 @@
     '''
 
   'Typescript-React: shouldComponentUpdate (4 spaces)':
-    'prefix': '_scu4'
+    'prefix': '_scup4'
     'body': '''
       public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
           ${2}
@@ -212,7 +212,7 @@
     '''
 
   'Typescript-React: componentWillUpdate (2 spaces)':
-    'prefix': '_cwu'
+    'prefix': '_cwup'
     'body': '''
       public componentWillUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
         ${2}
@@ -221,7 +221,7 @@
     '''
 
   'Typescript-React: componentWillUpdate (4 spaces)':
-    'prefix': '_cwu4'
+    'prefix': '_cwup4'
     'body': '''
       public componentWillUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
           ${2}
@@ -230,7 +230,7 @@
     '''
 
   'Typescript-React: componentDidUpdate (2 spaces)':
-    'prefix': '_cdu'
+    'prefix': '_cdup'
     'body': '''
       public componentDidUpdate(prevProps: I${1:ComponentName}Props, prevState: I${1:ComponentName}State) {
         ${2}
@@ -239,7 +239,7 @@
     '''
 
   'Typescript-React: componentDidUpdate (4 spaces)':
-    'prefix': '_cdu4'
+    'prefix': '_cdup4'
     'body': '''
       public componentDidUpdate(prevProps: I${1:ComponentName}Props, prevState: I${1:ComponentName}State) {
           ${2}
@@ -261,6 +261,28 @@
     'body': '''
       public componentWillUnmount() {
           ${1}
+      }
+      ${2}
+    '''
+
+  'Typescript-React: render (2 spaces)':
+    'prefix': '_ren'
+    'body': '''
+      public render() {
+        return (
+          ${1:<span>Body</span>}
+        );
+      }
+      ${2}
+    '''
+
+  'Typescript-React: render (4 spaces)':
+    'prefix': '_ren4'
+    'body': '''
+      public render() {
+          return (
+            ${1:<span>Body</span>}
+          );
       }
       ${2}
     '''

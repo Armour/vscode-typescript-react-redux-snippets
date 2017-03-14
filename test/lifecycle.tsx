@@ -19,19 +19,19 @@ class ComponentName extends React.Component<IComponentNameProps, IComponentNameS
   }
 
   public componentWillReceiveProps(nextProps: IComponentNameProps) {
-    // _cwrp
+    // _cwr
   }
 
   public shouldComponentUpdate(nextProps: IComponentNameProps, nextState: IComponentNameState) {
-    // _scu
+    // _scup
   }
 
   public componentWillUpdate(nextProps: IComponentNameProps, nextState: IComponentNameState) {
-    // _cwu
+    // _cwup
   }
 
   public componentDidUpdate(prevProps: IComponentNameProps, prevState: IComponentNameState) {
-    // _cdu
+    // _cdup
   }
 
   public componentWillUnmount() {
@@ -39,6 +39,7 @@ class ComponentName extends React.Component<IComponentNameProps, IComponentNameS
   }
 
   public render() {
+    // _ren
     return (
       <span>Body</span>
     );

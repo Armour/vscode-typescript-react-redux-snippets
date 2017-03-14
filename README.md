@@ -186,7 +186,7 @@ Typescript, React and Redux snippets for Atom (followed ES6 standard)
   ${2}
   ```
 
-* **_cwrp** : componentWillReceiveProps (2 spaces)
+* **_cwr** : componentWillReceiveProps (2 spaces)
 
   ```tsx
   public componentWillReceiveProps(nextProps: I${1:ComponentName}Props) {
@@ -195,7 +195,7 @@ Typescript, React and Redux snippets for Atom (followed ES6 standard)
   ${3}
   ```
 
-* **_cwrp4** : componentWillReceiveProps (4 spaces)
+* **_cwr4** : componentWillReceiveProps (4 spaces)
 
   ```tsx
   public componentWillReceiveProps(nextProps: I${1:ComponentName}Props) {
@@ -204,7 +204,7 @@ Typescript, React and Redux snippets for Atom (followed ES6 standard)
   ${3}
   ```
 
-* **_scu** : shouldComponentUpdate (2 spaces)
+* **_scup** : shouldComponentUpdate (2 spaces)
 
   ```tsx
   public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
@@ -213,7 +213,7 @@ Typescript, React and Redux snippets for Atom (followed ES6 standard)
   ${3}
   ```
 
-* **_scu4** : shouldComponentUpdate (4 spaces)
+* **_scup4** : shouldComponentUpdate (4 spaces)
 
   ```tsx
   public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
@@ -222,7 +222,7 @@ Typescript, React and Redux snippets for Atom (followed ES6 standard)
   ${3}
   ```
 
-* **_cwu** : componentWillUpdate (2 spaces)
+* **_cwup** : componentWillUpdate (2 spaces)
 
   ```tsx
   public componentWillUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
@@ -231,7 +231,7 @@ Typescript, React and Redux snippets for Atom (followed ES6 standard)
   ${3}
   ```
 
-* **_cwu4** : componentWillUpdate (4 spaces)
+* **_cwup4** : componentWillUpdate (4 spaces)
 
   ```tsx
   public componentWillUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
@@ -240,7 +240,7 @@ Typescript, React and Redux snippets for Atom (followed ES6 standard)
   ${3}
   ```
 
-* **_cdu** : componentDidUpdate (2 spaces)
+* **_cdup** : componentDidUpdate (2 spaces)
 
   ```tsx
   public componentDidUpdate(prevProps: I${1:ComponentName}Props, prevState: I${1:ComponentName}State) {
@@ -249,7 +249,7 @@ Typescript, React and Redux snippets for Atom (followed ES6 standard)
   ${3}
   ```
 
-* **_cdu4** : componentDidUpdate (4 spaces)
+* **_cdup4** : componentDidUpdate (4 spaces)
 
   ```tsx
   public componentDidUpdate(prevProps: I${1:ComponentName}Props, prevState: I${1:ComponentName}State) {
@@ -272,6 +272,27 @@ Typescript, React and Redux snippets for Atom (followed ES6 standard)
   ```tsx
   public componentWillUnmount() {
       {1}
+  }
+  ${2}
+  ```
+* **_ren** : render (2 spaces)
+
+  ```tsx
+  public render() {
+    return (
+      ${1:<span>Body</span>}
+    );
+  }
+  ${2}
+  ```
+
+* **_ren4** : render (4 spaces)
+
+  ```tsx
+  public render() {
+      return (
+        ${1:<span>Body</span>}
+      );
   }
   ${2}
   ```

@@ -1,5 +1,6 @@
 .vscode/
 node_moduels/
+snippets/ts-react.cson
 test/
 .babelrc
 .editorconfig

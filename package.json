@@ -30,6 +30,18 @@
     "url": "https://github.com/Armour/vscode-typescript-react-redux-snippets/issues"
   },
   "homepage": "https://github.com/Armour/vscode-typescript-react-redux-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/ts-react.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/ts-react.json"
+      }
+    ]
+  },
   "license": "MIT",
   "displayName": "Typescript React Redux Snippets",
   "devDependencies": {

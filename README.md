@@ -129,6 +129,112 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
   )(${1:ComponentName});
   ```
 
+* **_tsrrcont** : typescript react redux template - separate container (2 spaces)':
+
+  ```tsx
+    import { connect, Dispatch } from 'react-redux';
+
+    import ${1:ChildComponentName} from 'components/${1:ChildComponentName}';
+
+    interface I${2:ComponentName}Props {}
+
+    const mapStateToProps = (state: ${3:any}, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}StateProps => {
+      return {
+        // ...mapStateToProps
+      };
+    };
+
+    const mapDispatchToProps = (dispatch: Dispatch<${3:any}>, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}DispatchProps => {
+      return {
+        // ...mapDispatchToProps
+      };
+    };
+
+    export default connect(
+      mapStateToProps,
+      mapDispatchToProps,
+    )(${1:ChildComponentName});
+  ```
+
+* **_tsrrcont4** : typescript react redux template - separate container (4 spaces)':
+
+  ```tsx
+    import { connect, Dispatch } from 'react-redux';
+
+    import ${1:ChildComponentName} from 'components/${1:ChildComponentName}';
+
+    interface I${2:ComponentName}Props {}
+
+    const mapStateToProps = (state: ${3:any}, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}StateProps => {
+        return {
+            // ...mapStateToProps
+        };
+    };
+
+    const mapDispatchToProps = (dispatch: Dispatch<${3:any}>, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}DispatchProps => {
+        return {
+            // ...mapDispatchToProps
+        };
+    };
+
+    export default connect(
+        mapStateToProps,
+        mapDispatchToProps,
+    )(${1:ChildComponentName});
+  ```
+
+* **_tsrrcomp** : typescript react redux template - separate component (2 spaces)':
+
+  ```tsx
+    import React from 'react';
+
+    interface I${1:ComponentName}StateProps {}
+
+    interface I${1:ComponentName}DispatchProps {}
+
+    interface I${1:ComponentName}OtherProps {}
+
+    type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps & I${1:ComponentName}OtherProps;
+
+    interface I${1:ComponentName}State {}
+
+    class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+      public render() {
+        return (
+          ${2:<span>Body</span>}
+        );
+      }
+    }
+
+    export default ${1:ComponentName};
+  ```
+
+* **_tsrrcomp4** : typescript react redux template - separate component (4 spaces)':
+
+  ```tsx
+    import React from 'react';
+
+    interface I${1:ComponentName}StateProps {}
+
+    interface I${1:ComponentName}DispatchProps {}
+
+    interface I${1:ComponentName}OtherProps {}
+
+    type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps & I${1:ComponentName}OtherProps;
+
+    interface I${1:ComponentName}State {}
+
+    class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+        public render() {
+            return (
+              ${2:<span>Body</span>}
+            );
+        }
+    }
+
+    export default ${1:ComponentName};
+  ```
+
 * **_con** : constructor (2 spaces)
 
   ```tsx

@@ -8,13 +8,13 @@
   ],
   "parser": "babel-eslint",
   "rules": {
-    "indent": ["error", 2], // Enforce 2 spaces
-    "quotes": ["error", "single", { "allowTemplateLiterals": true }], // Allow ES6 template literals
-    "import/export": 2, // Report any invalid exports
-    "import/first": 2, // Ensure all imports appear before other statements
-    "import/no-commonjs": 2, // Report CommonJS require calls and module.exports or exports.*
-    "import/no-deprecated": 1, // Report imported names marked with @deprecated documentation tag
-    "import/no-duplicates": 2, // Report repeated import of the same module in multiple places
-    "import/no-unresolved": 2 // Ensure imports point to a file/module that can be resolved
+    "indent": ["error", 2],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "import/export": 2,
+    "import/first": 2,
+    "import/no-commonjs": 2,
+    "import/no-deprecated": 1,
+    "import/no-duplicates": 2,
+    "import/no-unresolved": 2
   }
 }

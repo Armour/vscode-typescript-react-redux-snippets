@@ -15,6 +15,22 @@
     "prefix": "_tsrr4",
     "body": "import React from 'react';\nimport { connect, Dispatch } from 'react-redux';\n\ninterface I${1:ComponentName}StateProps {}\n\ninterface I${1:ComponentName}DispatchProps {}\n\ntype I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;\n\ninterface I${1:ComponentName}State {}\n\nclass ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {\n    public render() {\n        return (\n          ${3:<span>Body</span>}\n        );\n    }\n}\n\nconst mapStateToProps = (state: ${2:any}): I${1:ComponentName}StateProps => {\n    return {\n        // ...mapStateToProps\n    };\n};\n\nconst mapDispatchToProps = (dispatch: Dispatch<${2:any}>): I${1:ComponentName}DispatchProps => {\n    return {\n        // ...mapDispatchToProps\n    };\n};\n\nexport default connect(\n    mapStateToProps,\n    mapDispatchToProps,\n)(${1:ComponentName});"
   },
+  "Typescript-React: typescript react redux template - separate container (2 spaces)": {
+    "prefix": "_tsrrcont",
+    "body": "import { connect, Dispatch } from 'react-redux';\n\nimport ${1:ChildComponentName} from 'components/${1:ChildComponentName}';\n\ninterface I${2:ComponentName}Props {}\n\nconst mapStateToProps = (state: ${3:any}, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}StateProps => {\n  return {\n    // ...mapStateToProps\n  };\n};\n\nconst mapDispatchToProps = (dispatch: Dispatch<${3:any}>, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}DispatchProps => {\n  return {\n    // ...mapDispatchToProps\n  };\n};\n\nexport default connect(\n  mapStateToProps,\n  mapDispatchToProps,\n)(${1:ChildComponentName});"
+  },
+  "Typescript-React: typescript react redux template - separate container (4 spaces)": {
+    "prefix": "_tsrrcont4",
+    "body": "import { connect, Dispatch } from 'react-redux';\n\nimport ${1:ChildComponentName} from 'components/${1:ChildComponentName}';\n\ninterface I${2:ComponentName}Props {}\n\nconst mapStateToProps = (state: ${3:any}, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}StateProps => {\n    return {\n        // ...mapStateToProps\n    };\n};\n\nconst mapDispatchToProps = (dispatch: Dispatch<${3:any}>, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}DispatchProps => {\n    return {\n        // ...mapDispatchToProps\n    };\n};\n\nexport default connect(\n    mapStateToProps,\n    mapDispatchToProps,\n)(${1:ChildComponentName});"
+  },
+  "Typescript-React: typescript react redux template - separate component (2 spaces)": {
+    "prefix": "_tsrrcomp",
+    "body": "import React from 'react';\n\ninterface I${1:ComponentName}StateProps {}\n\ninterface I${1:ComponentName}DispatchProps {}\n\ninterface I${1:ComponentName}OtherProps {}\n\ntype I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps & I${1:ComponentName}OtherProps;\n\ninterface I${1:ComponentName}State {}\n\nclass ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {\n  public render() {\n    return (\n      ${2:<span>Body</span>}\n    );\n  }\n}\n\nexport default ${1:ComponentName};"
+  },
+  "Typescript-React: typescript react redux template - separate component (4 spaces)": {
+    "prefix": "_tsrrcomp4",
+    "body": "import React from 'react';\n\ninterface I${1:ComponentName}StateProps {}\n\ninterface I${1:ComponentName}DispatchProps {}\n\ninterface I${1:ComponentName}OtherProps {}\n\ntype I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps & I${1:ComponentName}OtherProps;\n\ninterface I${1:ComponentName}State {}\n\nclass ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {\n    public render() {\n        return (\n          ${2:<span>Body</span>}\n        );\n    }\n}\n\nexport default ${1:ComponentName};"
+  },
   "Typescript-React: constructor (2 spaces)": {
     "prefix": "_con",
     "body": "constructor(props: I${1:ComponentName}Props) {\n  super(props);\n  ${2}\n}\n${3}"

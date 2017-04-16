@@ -7,8 +7,7 @@
 
 Typescript, React and Redux snippets for VSCode (followed ES6 standard)
 
-
-# Snippets
+## Snippets
 
 * **_tsr** : basic typescript react template (2 spaces)
 
@@ -297,41 +296,36 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
   ${2}
   ```
 
-
-# Install
+## Install
 
 Launch VS Code Quick Open (⌘+P), paste the following command, and press enter.
 
-~~~
+```bash
 ext install vscode-typescript-react-redux-snippets
-~~~
+```
 
-
-# Development
+## Development
 
 ```bash
-$ cd ~/.vscode/extensions
-$ git clone https://github.com/Armour/vscode-typescript-react-redux-snippets
-$ cd vscode-typescript-react-redux-snippets
+cd ~/.vscode/extensions
+git clone https://github.com/Armour/vscode-typescript-react-redux-snippets
+cd vscode-typescript-react-redux-snippets
 ```
 
 This will load our snippets each time VS Code runs
 
-
-# Contributing
+## Contributing
 
 1. Fork this repo.
-2. Create your own branch: git checkout -b feature/my-feature
-3. Commit your changes: git commit -m 'add some new feature'
-4. Push to your branch: git push origin feature/my-feature
-5. Send me a pull request :)
+1. Create your own branch: git checkout -b feature/my-feature
+1. Commit your changes: git commit -m 'add some new feature'
+1. Push to your branch: git push origin feature/my-feature
+1. Send me a pull request :)
 
-
-# Others
+## Others
 
 If you prefer to use Atom, check my [another repo](https://github.com/Armour/atom-typescript-react-redux-snippets).
 
-
-# License 
+## License
 
 MIT License

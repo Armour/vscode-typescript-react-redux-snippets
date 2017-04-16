@@ -1,15 +1,15 @@
 {
-  "compileOnSave": false, // Disable compile on save
+  "compileOnSave": false,
   "compilerOptions": {
     "module": "es6",
     "target": "es6",
     "jsx": "preserve",
-    "strictNullChecks": true, // Strict null checking mode
-    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
-    "noImplicitAny": true, // Raise error on expressions and declarations with an implied `any` type
-    "noImplicitThis": true, // Raise error on `this` expressions with an implied any type.
-    "noEmitOnError": true, // Do not emit outputs if any errors were reported
-    "preserveConstEnums": true, // Do not erase const enum declarations in generated code
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noEmitOnError": true,
+    "preserveConstEnums": true,
     "moduleResolution": "node",
     "baseUrl": "test",
     "typeRoots": [

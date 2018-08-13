@@ -1,10 +1,10 @@
 # VSCode-Typescript-React-Redux-Snippets
 
-[![CircleCI](https://circleci.com/gh/Armour/vscode-typescript-react-redux-snippets/tree/master.svg?style=shield)](https://circleci.com/gh/Armour/vscode-typescript-react-redux-snippets/tree/master)
-[![Dependencies Status](https://david-dm.org/Armour/vscode-typescript-react-redux-snippets/status.svg)](https://david-dm.org/Armour/vscode-typescript-react-redux-snippets)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Template from jarvis](https://img.shields.io/badge/Hi-Jarvis-ff69b4.svg)](https://github.com/Armour/Jarvis)
+[![CircleCI](https://circleci.com/gh/Armour/vscode-typescript-react-redux-snippets/tree/master.png?style=shield)](https://circleci.com/gh/Armour/vscode-typescript-react-redux-snippets/tree/master)
+[![devDependencies Status](https://david-dm.org/Armour/vscode-typescript-react-redux-snippets/dev-status.png)](https://david-dm.org/Armour/vscode-typescript-react-redux-snippets?type=dev)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.png?style=flat)](http://makeapullrequest.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.png)](https://opensource.org/licenses/MIT)
+[![Template from jarvis](https://img.shields.io/badge/Hi-Jarvis-ff69b4.png)](https://github.com/Armour/Jarvis)
 
 Typescript, React and Redux snippets for VSCode (followed ES6 standard)
 

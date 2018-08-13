@@ -13,8 +13,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Install dependencies
-        command: yarn install
+          name: Install dependencies
+          command: yarn install
       - run:
-        name: Run test
-        command: yarn test
+          name: Run test
+          command: yarn test

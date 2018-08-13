@@ -1,7 +1,7 @@
-'Typescript-React: basic typescript react template (2 spaces)':
+'Typescript-React: basic typescript react template':
   'prefix': '_tsr'
   'body': '''
-    import React from 'react';
+    import * as React from 'react';
 
     interface I${1:ComponentName}Props {}
 
@@ -18,41 +18,24 @@
     export default ${1:ComponentName};
   '''
 
-'Typescript-React: basic typescript react template (4 spaces)':
-  'prefix': '_tsr4'
-  'body': '''
-    import React from 'react';
-
-    interface I${1:ComponentName}Props {}
-
-    interface I${1:ComponentName}State {}
-
-    class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
-        public render() {
-            return (
-              ${2:<span>Body</span>}
-            );
-        }
-    }
-
-    export default ${1:ComponentName};
-  '''
-
-'Typescript-React: typescript react redux template (2 spaces)':
+'Typescript-React: typescript react redux template':
   'prefix': '_tsrr'
   'body': '''
-    import React from 'react';
-    import { connect, Dispatch } from 'react-redux';
+    import * as React from 'react';
+    import { connect } from 'react-redux';
+    import { AnyAction, Dispatch } from 'redux';
+
+    // Component
 
     interface I${1:ComponentName}StateProps {}
 
     interface I${1:ComponentName}DispatchProps {}
 
-    type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;
+    type I${1:ComponentName}ComponentProps = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;
 
-    interface I${1:ComponentName}State {}
+    interface I${1:ComponentName}ComponentState {}
 
-    class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+    class ${1:ComponentName}Component extends React.Component<I${1:ComponentName}ComponentProps, I${1:ComponentName}ComponentState> {
       public render() {
         return (
           ${3:<span>Body</span>}
@@ -60,13 +43,17 @@
       }
     }
 
-    const mapStateToProps = (state: ${2:any}): I${1:ComponentName}StateProps => {
+    // Container
+
+    interface I${1:ComponentName}Props {}
+
+    const mapStateToProps = (state: ${2:IGlobalState}, ownProps: I${1:ComponentName}Props): I${1:ComponentName}StateProps => {
       return {
         // ...mapStateToProps
       };
     };
 
-    const mapDispatchToProps = (dispatch: Dispatch<${2:any}>): I${1:ComponentName}DispatchProps => {
+    const mapDispatchToProps = (dispatch: Dispatch<AnyAction>, ownProps: I${1:ComponentName}Props): I${1:ComponentName}DispatchProps => {
       return {
         // ...mapDispatchToProps
       };
@@ -75,156 +62,10 @@
     export default connect(
       mapStateToProps,
       mapDispatchToProps,
-    )(${1:ComponentName});
+    )(${1:ComponentName}Component);
   '''
 
-'Typescript-React: typescript react redux template (4 spaces)':
-  'prefix': '_tsrr4'
-  'body': '''
-    import React from 'react';
-    import { connect, Dispatch } from 'react-redux';
-
-    interface I${1:ComponentName}StateProps {}
-
-    interface I${1:ComponentName}DispatchProps {}
-
-    type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;
-
-    interface I${1:ComponentName}State {}
-
-    class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
-        public render() {
-            return (
-              ${3:<span>Body</span>}
-            );
-        }
-    }
-
-    const mapStateToProps = (state: ${2:any}): I${1:ComponentName}StateProps => {
-        return {
-            // ...mapStateToProps
-        };
-    };
-
-    const mapDispatchToProps = (dispatch: Dispatch<${2:any}>): I${1:ComponentName}DispatchProps => {
-        return {
-            // ...mapDispatchToProps
-        };
-    };
-
-    export default connect(
-        mapStateToProps,
-        mapDispatchToProps,
-    )(${1:ComponentName});
-  '''
-
-'Typescript-React: typescript react redux template - separate container (2 spaces)':
-  'prefix': '_tsrrcont'
-  'body': '''
-    import { connect, Dispatch } from 'react-redux';
-
-    import ${1:ChildComponentName} from 'components/${1:ChildComponentName}';
-
-    interface I${2:ComponentName}Props {}
-
-    const mapStateToProps = (state: ${3:any}, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}StateProps => {
-      return {
-        // ...mapStateToProps
-      };
-    };
-
-    const mapDispatchToProps = (dispatch: Dispatch<${3:any}>, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}DispatchProps => {
-      return {
-        // ...mapDispatchToProps
-      };
-    };
-
-    export default connect(
-      mapStateToProps,
-      mapDispatchToProps,
-    )(${1:ChildComponentName});
-  '''
-
-'Typescript-React: typescript react redux template - separate container (4 spaces)':
-  'prefix': '_tsrrcont4'
-  'body': '''
-    import { connect, Dispatch } from 'react-redux';
-
-    import ${1:ChildComponentName} from 'components/${1:ChildComponentName}';
-
-    interface I${2:ComponentName}Props {}
-
-    const mapStateToProps = (state: ${3:any}, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}StateProps => {
-        return {
-            // ...mapStateToProps
-        };
-    };
-
-    const mapDispatchToProps = (dispatch: Dispatch<${3:any}>, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}DispatchProps => {
-        return {
-            // ...mapDispatchToProps
-        };
-    };
-
-    export default connect(
-        mapStateToProps,
-        mapDispatchToProps,
-    )(${1:ChildComponentName});
-  '''
-
-'Typescript-React: typescript react redux template - separate component (2 spaces)':
-  'prefix': '_tsrrcomp'
-  'body': '''
-    import React from 'react';
-
-    interface I${1:ComponentName}StateProps {}
-
-    interface I${1:ComponentName}DispatchProps {}
-
-    interface I${1:ComponentName}OtherProps {}
-
-    type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps & I${1:ComponentName}OtherProps;
-
-    interface I${1:ComponentName}State {}
-
-    class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
-      public render() {
-        return (
-          ${2:<span>Body</span>}
-        );
-      }
-    }
-
-    export default ${1:ComponentName};
-  '''
-
-'Typescript-React: typescript react redux template - separate component (4 spaces)':
-  'prefix': '_tsrrcomp4'
-  'body': '''
-    import React from 'react';
-
-    interface I${1:ComponentName}StateProps {}
-
-    interface I${1:ComponentName}DispatchProps {}
-
-    interface I${1:ComponentName}OtherProps {}
-
-    type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps & I${1:ComponentName}OtherProps;
-
-    interface I${1:ComponentName}State {}
-
-    class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
-        public render() {
-            return (
-              ${2:<span>Body</span>}
-            );
-        }
-    }
-
-    export default ${1:ComponentName};
-  '''
-
-'Typescript-React: constructor (2 spaces)':
+'Typescript-React: constructor':
   'prefix': '_con'
   'body': '''
     constructor(props: I${1:ComponentName}Props) {
@@ -234,17 +75,7 @@
     ${3}
   '''
 
-'Typescript-React: constructor (4 spaces)':
-  'prefix': '_con4'
-  'body': '''
-    constructor(props: I${1:ComponentName}Props) {
-        super(props);
-        ${2}
-    }
-    ${3}
-  '''
-
-'Typescript-React: componentWillMount (2 spaces)':
+'Typescript-React: componentWillMount':
   'prefix': '_cwm'
   'body': '''
     public componentWillMount() {
@@ -253,16 +84,7 @@
     ${2}
   '''
 
-'Typescript-React: componentWillMount (4 spaces)':
-  'prefix': '_cwm4'
-  'body': '''
-    public componentWillMount() {
-        ${1}
-    }
-    ${2}
-  '''
-
-'Typescript-React: componentDidMount (2 spaces)':
+'Typescript-React: componentDidMount':
   'prefix': '_cdm'
   'body': '''
     public componentDidMount() {
@@ -271,16 +93,7 @@
     ${2}
   '''
 
-'Typescript-React: componentDidMount (4 spaces)':
-  'prefix': '_cdm4'
-  'body': '''
-    public componentDidMount() {
-        ${1}
-    }
-    ${2}
-  '''
-
-'Typescript-React: componentWillReceiveProps (2 spaces)':
+'Typescript-React: componentWillReceiveProps':
   'prefix': '_cwr'
   'body': '''
     public componentWillReceiveProps(nextProps: I${1:ComponentName}Props) {
@@ -289,34 +102,17 @@
     ${3}
   '''
 
-'Typescript-React: componentWillReceiveProps (4 spaces)':
-  'prefix': '_cwr4'
-  'body': '''
-    public componentWillReceiveProps(nextProps: I${1:ComponentName}Props) {
-        ${2}
-    }
-    ${3}
-  '''
-
-'Typescript-React: shouldComponentUpdate (2 spaces)':
+'Typescript-React: shouldComponentUpdate':
   'prefix': '_scup'
   'body': '''
-    public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
+    public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State): boolean {
       ${2}
+      return true;
     }
     ${3}
   '''
 
-'Typescript-React: shouldComponentUpdate (4 spaces)':
-  'prefix': '_scup4'
-  'body': '''
-    public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
-        ${2}
-    }
-    ${3}
-  '''
-
-'Typescript-React: componentWillUpdate (2 spaces)':
+'Typescript-React: componentWillUpdate':
   'prefix': '_cwup'
   'body': '''
     public componentWillUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
@@ -325,16 +121,7 @@
     ${3}
   '''
 
-'Typescript-React: componentWillUpdate (4 spaces)':
-  'prefix': '_cwup4'
-  'body': '''
-    public componentWillUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
-        ${2}
-    }
-    ${3}
-  '''
-
-'Typescript-React: componentDidUpdate (2 spaces)':
+'Typescript-React: componentDidUpdate':
   'prefix': '_cdup'
   'body': '''
     public componentDidUpdate(prevProps: I${1:ComponentName}Props, prevState: I${1:ComponentName}State) {
@@ -343,51 +130,11 @@
     ${3}
   '''
 
-'Typescript-React: componentDidUpdate (4 spaces)':
-  'prefix': '_cdup4'
-  'body': '''
-    public componentDidUpdate(prevProps: I${1:ComponentName}Props, prevState: I${1:ComponentName}State) {
-        ${2}
-    }
-    ${3}
-  '''
-
-'Typescript-React: componentWillUnmount (2 spaces)':
+'Typescript-React: componentWillUnmount':
   'prefix': '_cwun'
   'body': '''
     public componentWillUnmount() {
       ${1}
-    }
-    ${2}
-  '''
-
-'Typescript-React: componentWillUnmount (4 spaces)':
-  'prefix': '_cwun4'
-  'body': '''
-    public componentWillUnmount() {
-        ${1}
-    }
-    ${2}
-  '''
-
-'Typescript-React: render (2 spaces)':
-  'prefix': '_ren'
-  'body': '''
-    public render() {
-      return (
-        ${1:<span>Body</span>}
-      );
-    }
-    ${2}
-  '''
-
-'Typescript-React: render (4 spaces)':
-  'prefix': '_ren4'
-  'body': '''
-    public render() {
-        return (
-          ${1:<span>Body</span>}
-        );
     }
     ${2}
   '''

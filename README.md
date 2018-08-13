@@ -1,18 +1,19 @@
 # VSCode-Typescript-React-Redux-Snippets
 
-[![Build Status](https://travis-ci.org/Armour/vscode-typescript-react-redux-snippets.svg?branch=master)](https://travis-ci.org/Armour/vscode-typescript-react-redux-snippets)
+[![CircleCI](https://circleci.com/gh/Armour/vscode-typescript-react-redux-snippets/tree/master.svg?style=shield)](https://circleci.com/gh/Armour/vscode-typescript-react-redux-snippets/tree/master)
 [![Dependencies Status](https://david-dm.org/Armour/vscode-typescript-react-redux-snippets/status.svg)](https://david-dm.org/Armour/vscode-typescript-react-redux-snippets)
-[![DevDependencies Status](https://david-dm.org/Armour/vscode-typescript-react-redux-snippets/dev-status.svg)](https://david-dm.org/Armour/vscode-typescript-react-redux-snippets?type=dev)
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Template from jarvis](https://img.shields.io/badge/Hi-Jarvis-ff69b4.svg)](https://github.com/Armour/Jarvis)
 
 Typescript, React and Redux snippets for VSCode (followed ES6 standard)
 
 ## Snippets
 
-* **_tsr** : basic typescript react template (2 spaces)
+* **_tsr** : basic typescript react template
 
   ```tsx
-  import React from 'react';
+  import * as React from 'react';
 
   interface I${1:ComponentName}Props {}
 
@@ -29,41 +30,24 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
   export default ${1:ComponentName};
   ```
 
-* **_tsr4** : basic typescript react template (4 spaces)
+* **_tsrr** : typescript react redux template
 
   ```tsx
-  import React from 'react';
+  import * as React from 'react';
+  import { connect } from 'react-redux';
+  import { AnyAction, Dispatch } from 'redux';
 
-  interface I${1:ComponentName}Props {}
-
-  interface I${1:ComponentName}State {}
-
-  class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
-      public render() {
-          return (
-            ${2:<span>Body</span>}
-          );
-      }
-  }
-
-  export default ${1:ComponentName};
-  ```
-
-* **_tsrr** : typescript react redux template (2 spaces)
-
-  ```tsx
-  import React from 'react';
-  import { connect, Dispatch } from 'react-redux';
+  // Component
 
   interface I${1:ComponentName}StateProps {}
 
   interface I${1:ComponentName}DispatchProps {}
 
-  type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;
+  type I${1:ComponentName}ComponentProps = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;
 
-  interface I${1:ComponentName}State {}
+  interface I${1:ComponentName}ComponentState {}
 
-  class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+  class ${1:ComponentName}Component extends React.Component<I${1:ComponentName}ComponentProps, I${1:ComponentName}ComponentState> {
     public render() {
       return (
         ${3:<span>Body</span>}
@@ -71,13 +55,17 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
     }
   }
 
-  const mapStateToProps = (state: ${2:any}): I${1:ComponentName}StateProps => {
+  // Container
+
+  interface I${1:ComponentName}Props {}
+
+  const mapStateToProps = (state: ${2:IGlobalState}, ownProps: I${1:ComponentName}Props): I${1:ComponentName}StateProps => {
     return {
       // ...mapStateToProps
     };
   };
 
-  const mapDispatchToProps = (dispatch: Dispatch<${2:any}>): I${1:ComponentName}DispatchProps => {
+  const mapDispatchToProps = (dispatch: Dispatch<AnyAction>, ownProps: I${1:ComponentName}Props): I${1:ComponentName}DispatchProps => {
     return {
       // ...mapDispatchToProps
     };
@@ -86,156 +74,10 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
   export default connect(
     mapStateToProps,
     mapDispatchToProps,
-  )(${1:ComponentName});
+  )(${1:ComponentName}Component);
   ```
 
-* **_tsrr4** : typescript react redux template (4 spaces)
-
-  ```tsx
-  import React from 'react';
-  import { connect, Dispatch } from 'react-redux';
-
-  interface I${1:ComponentName}StateProps {}
-
-  interface I${1:ComponentName}DispatchProps {}
-
-  type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;
-
-  interface I${1:ComponentName}State {}
-
-  class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
-      public render() {
-          return (
-            ${3:<span>Body</span>}
-          );
-      }
-  }
-
-  const mapStateToProps = (state: ${2:any}): I${1:ComponentName}StateProps => {
-      return {
-          // ...mapStateToProps
-      };
-  };
-
-  const mapDispatchToProps = (dispatch: Dispatch<${2:any}>): I${1:ComponentName}DispatchProps => {
-      return {
-          // ...mapDispatchToProps
-      };
-  };
-
-  export default connect(
-      mapStateToProps,
-      mapDispatchToProps,
-  )(${1:ComponentName});
-  ```
-
-* **_tsrrcont** : typescript react redux template - separate container (2 spaces)':
-
-  ```tsx
-    import { connect, Dispatch } from 'react-redux';
-
-    import ${1:ChildComponentName} from 'components/${1:ChildComponentName}';
-
-    interface I${2:ComponentName}Props {}
-
-    const mapStateToProps = (state: ${3:any}, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}StateProps => {
-      return {
-        // ...mapStateToProps
-      };
-    };
-
-    const mapDispatchToProps = (dispatch: Dispatch<${3:any}>, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}DispatchProps => {
-      return {
-        // ...mapDispatchToProps
-      };
-    };
-
-    export default connect(
-      mapStateToProps,
-      mapDispatchToProps,
-    )(${1:ChildComponentName});
-  ```
-
-* **_tsrrcont4** : typescript react redux template - separate container (4 spaces)':
-
-  ```tsx
-    import { connect, Dispatch } from 'react-redux';
-
-    import ${1:ChildComponentName} from 'components/${1:ChildComponentName}';
-
-    interface I${2:ComponentName}Props {}
-
-    const mapStateToProps = (state: ${3:any}, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}StateProps => {
-        return {
-            // ...mapStateToProps
-        };
-    };
-
-    const mapDispatchToProps = (dispatch: Dispatch<${3:any}>, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}DispatchProps => {
-        return {
-            // ...mapDispatchToProps
-        };
-    };
-
-    export default connect(
-        mapStateToProps,
-        mapDispatchToProps,
-    )(${1:ChildComponentName});
-  ```
-
-* **_tsrrcomp** : typescript react redux template - separate component (2 spaces)':
-
-  ```tsx
-    import React from 'react';
-
-    interface I${1:ComponentName}StateProps {}
-
-    interface I${1:ComponentName}DispatchProps {}
-
-    interface I${1:ComponentName}OtherProps {}
-
-    type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps & I${1:ComponentName}OtherProps;
-
-    interface I${1:ComponentName}State {}
-
-    class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
-      public render() {
-        return (
-          ${2:<span>Body</span>}
-        );
-      }
-    }
-
-    export default ${1:ComponentName};
-  ```
-
-* **_tsrrcomp4** : typescript react redux template - separate component (4 spaces)':
-
-  ```tsx
-    import React from 'react';
-
-    interface I${1:ComponentName}StateProps {}
-
-    interface I${1:ComponentName}DispatchProps {}
-
-    interface I${1:ComponentName}OtherProps {}
-
-    type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps & I${1:ComponentName}OtherProps;
-
-    interface I${1:ComponentName}State {}
-
-    class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
-        public render() {
-            return (
-              ${2:<span>Body</span>}
-            );
-        }
-    }
-
-    export default ${1:ComponentName};
-  ```
-
-* **_con** : constructor (2 spaces)
+* **_con** : constructor
 
   ```tsx
   constructor(props: I${1:ComponentName}Props) {
@@ -245,17 +87,7 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
   ${3}
   ```
 
-* **_con4** : constructor (4 spaces)
-
-  ```tsx
-  constructor(props: I${1:ComponentName}Props) {
-      super(props);
-      ${2}
-  }
-  ${3}
-  ```
-
-* **_cwm** : componentWillMount (2 spaces)
+* **_cwm** : componentWillMount
 
   ```tsx
   public componentWillMount() {
@@ -264,16 +96,7 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
   ${2}
   ```
 
-* **_cwm4** : componentWillMount (4 spaces)
-
-  ```tsx
-  public componentWillMount() {
-      {1}
-  }
-  ${2}
-  ```
-
-* **_cdm** : componentDidMount (2 spaces)
+* **_cdm** : componentDidMount
 
   ```tsx
   public componentDidMount() {
@@ -282,16 +105,7 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
   ${2}
   ```
 
-* **_cdm4** : componentDidMount (4 spaces)
-
-  ```tsx
-  public componentDidMount() {
-      {1}
-  }
-  ${2}
-  ```
-
-* **_cwr** : componentWillReceiveProps (2 spaces)
+* **_cwr** : componentWillReceiveProps
 
   ```tsx
   public componentWillReceiveProps(nextProps: I${1:ComponentName}Props) {
@@ -300,34 +114,17 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
   ${3}
   ```
 
-* **_cwr4** : componentWillReceiveProps (4 spaces)
+* **_scup** : shouldComponentUpdate
 
   ```tsx
-  public componentWillReceiveProps(nextProps: I${1:ComponentName}Props) {
-      ${2}
-  }
-  ${3}
-  ```
-
-* **_scup** : shouldComponentUpdate (2 spaces)
-
-  ```tsx
-  public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
+  public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State): boolean {
     ${2}
+    return true;
   }
   ${3}
   ```
 
-* **_scup4** : shouldComponentUpdate (4 spaces)
-
-  ```tsx
-  public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
-      ${2}
-  }
-  ${3}
-  ```
-
-* **_cwup** : componentWillUpdate (2 spaces)
+* **_cwup** : componentWillUpdate
 
   ```tsx
   public componentWillUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
@@ -336,16 +133,7 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
   ${3}
   ```
 
-* **_cwup4** : componentWillUpdate (4 spaces)
-
-  ```tsx
-  public componentWillUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {
-      ${2}
-  }
-  ${3}
-  ```
-
-* **_cdup** : componentDidUpdate (2 spaces)
+* **_cdup** : componentDidUpdate
 
   ```tsx
   public componentDidUpdate(prevProps: I${1:ComponentName}Props, prevState: I${1:ComponentName}State) {
@@ -354,50 +142,11 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
   ${3}
   ```
 
-* **_cdup4** : componentDidUpdate (4 spaces)
-
-  ```tsx
-  public componentDidUpdate(prevProps: I${1:ComponentName}Props, prevState: I${1:ComponentName}State) {
-      ${2}
-  }
-  ${3}
-  ```
-
-* **_cwun** : componentWillUnmount (2 spaces)
+* **_cwun** : componentWillUnmount
 
   ```tsx
   public componentWillUnmount() {
     {1}
-  }
-  ${2}
-  ```
-
-* **_cwun4** : componentWillUnmount (4 spaces)
-
-  ```tsx
-  public componentWillUnmount() {
-      {1}
-  }
-  ${2}
-  ```
-* **_ren** : render (2 spaces)
-
-  ```tsx
-  public render() {
-    return (
-      ${1:<span>Body</span>}
-    );
-  }
-  ${2}
-  ```
-
-* **_ren4** : render (4 spaces)
-
-  ```tsx
-  public render() {
-      return (
-        ${1:<span>Body</span>}
-      );
   }
   ${2}
   ```
@@ -422,16 +171,8 @@ This will load our snippets each time VS Code runs
 
 ## Contributing
 
-1. Fork this repo.
-1. Create your own branch: git checkout -b feature/my-feature
-1. Commit your changes: git commit -m 'add some new feature'
-1. Push to your branch: git push origin feature/my-feature
-1. Send me a pull request :)
-
-## Others
-
-If you prefer to use Atom, check my [another repo](https://github.com/Armour/atom-typescript-react-redux-snippets).
+See [CONTRIBUTING.md](https://github.com/Armour/vscode-typescript-react-redux-snippets/blob/master/.github/CONTRIBUTING.md)
 
 ## License
 
-MIT License
+[MIT License](https://github.com/Armour/vscode-typescript-react-redux-snippets/blob/master/LICENSE)

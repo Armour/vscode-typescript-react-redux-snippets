@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 interface IComponentNameProps {}
 
@@ -22,8 +22,9 @@ class ComponentName extends React.Component<IComponentNameProps, IComponentNameS
     // _cwr
   }
 
-  public shouldComponentUpdate(nextProps: IComponentNameProps, nextState: IComponentNameState) {
+  public shouldComponentUpdate(nextProps: IComponentNameProps, nextState: IComponentNameState): boolean {
     // _scup
+    return true;
   }
 
   public componentWillUpdate(nextProps: IComponentNameProps, nextState: IComponentNameState) {

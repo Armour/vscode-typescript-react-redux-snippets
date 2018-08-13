@@ -1,106 +1,42 @@
 {
-  "Typescript-React: basic typescript react template (2 spaces)": {
+  "Typescript-React: basic typescript react template": {
     "prefix": "_tsr",
-    "body": "import React from 'react';\n\ninterface I${1:ComponentName}Props {}\n\ninterface I${1:ComponentName}State {}\n\nclass ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {\n  public render() {\n    return (\n      ${2:<span>Body</span>}\n    );\n  }\n}\n\nexport default ${1:ComponentName};"
+    "body": "import * as React from 'react';\n\ninterface I${1:ComponentName}Props {}\n\ninterface I${1:ComponentName}State {}\n\nclass ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {\n  public render() {\n    return (\n      ${2:<span>Body</span>}\n    );\n  }\n}\n\nexport default ${1:ComponentName};"
   },
-  "Typescript-React: basic typescript react template (4 spaces)": {
-    "prefix": "_tsr4",
-    "body": "import React from 'react';\n\ninterface I${1:ComponentName}Props {}\n\ninterface I${1:ComponentName}State {}\n\nclass ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {\n    public render() {\n        return (\n          ${2:<span>Body</span>}\n        );\n    }\n}\n\nexport default ${1:ComponentName};"
-  },
-  "Typescript-React: typescript react redux template (2 spaces)": {
+  "Typescript-React: typescript react redux template": {
     "prefix": "_tsrr",
-    "body": "import React from 'react';\nimport { connect, Dispatch } from 'react-redux';\n\ninterface I${1:ComponentName}StateProps {}\n\ninterface I${1:ComponentName}DispatchProps {}\n\ntype I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;\n\ninterface I${1:ComponentName}State {}\n\nclass ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {\n  public render() {\n    return (\n      ${3:<span>Body</span>}\n    );\n  }\n}\n\nconst mapStateToProps = (state: ${2:any}): I${1:ComponentName}StateProps => {\n  return {\n    // ...mapStateToProps\n  };\n};\n\nconst mapDispatchToProps = (dispatch: Dispatch<${2:any}>): I${1:ComponentName}DispatchProps => {\n  return {\n    // ...mapDispatchToProps\n  };\n};\n\nexport default connect(\n  mapStateToProps,\n  mapDispatchToProps,\n)(${1:ComponentName});"
+    "body": "import * as React from 'react';\nimport { connect } from 'react-redux';\nimport { AnyAction, Dispatch } from 'redux';\n\n// Component\n\ninterface I${1:ComponentName}StateProps {}\n\ninterface I${1:ComponentName}DispatchProps {}\n\ntype I${1:ComponentName}ComponentProps = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;\n\ninterface I${1:ComponentName}ComponentState {}\n\nclass ${1:ComponentName}Component extends React.Component<I${1:ComponentName}ComponentProps, I${1:ComponentName}ComponentState> {\n  public render() {\n    return (\n      ${3:<span>Body</span>}\n    );\n  }\n}\n\n// Container\n\ninterface I${1:ComponentName}Props {}\n\nconst mapStateToProps = (state: ${2:IGlobalState}, ownProps: I${1:ComponentName}Props): I${1:ComponentName}StateProps => {\n  return {\n    // ...mapStateToProps\n  };\n};\n\nconst mapDispatchToProps = (dispatch: Dispatch<AnyAction>, ownProps: I${1:ComponentName}Props): I${1:ComponentName}DispatchProps => {\n  return {\n    // ...mapDispatchToProps\n  };\n};\n\nexport default connect(\n  mapStateToProps,\n  mapDispatchToProps,\n)(${1:ComponentName}Component);"
   },
-  "Typescript-React: typescript react redux template (4 spaces)": {
-    "prefix": "_tsrr4",
-    "body": "import React from 'react';\nimport { connect, Dispatch } from 'react-redux';\n\ninterface I${1:ComponentName}StateProps {}\n\ninterface I${1:ComponentName}DispatchProps {}\n\ntype I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;\n\ninterface I${1:ComponentName}State {}\n\nclass ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {\n    public render() {\n        return (\n          ${3:<span>Body</span>}\n        );\n    }\n}\n\nconst mapStateToProps = (state: ${2:any}): I${1:ComponentName}StateProps => {\n    return {\n        // ...mapStateToProps\n    };\n};\n\nconst mapDispatchToProps = (dispatch: Dispatch<${2:any}>): I${1:ComponentName}DispatchProps => {\n    return {\n        // ...mapDispatchToProps\n    };\n};\n\nexport default connect(\n    mapStateToProps,\n    mapDispatchToProps,\n)(${1:ComponentName});"
-  },
-  "Typescript-React: typescript react redux template - separate container (2 spaces)": {
-    "prefix": "_tsrrcont",
-    "body": "import { connect, Dispatch } from 'react-redux';\n\nimport ${1:ChildComponentName} from 'components/${1:ChildComponentName}';\n\ninterface I${2:ComponentName}Props {}\n\nconst mapStateToProps = (state: ${3:any}, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}StateProps => {\n  return {\n    // ...mapStateToProps\n  };\n};\n\nconst mapDispatchToProps = (dispatch: Dispatch<${3:any}>, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}DispatchProps => {\n  return {\n    // ...mapDispatchToProps\n  };\n};\n\nexport default connect(\n  mapStateToProps,\n  mapDispatchToProps,\n)(${1:ChildComponentName});"
-  },
-  "Typescript-React: typescript react redux template - separate container (4 spaces)": {
-    "prefix": "_tsrrcont4",
-    "body": "import { connect, Dispatch } from 'react-redux';\n\nimport ${1:ChildComponentName} from 'components/${1:ChildComponentName}';\n\ninterface I${2:ComponentName}Props {}\n\nconst mapStateToProps = (state: ${3:any}, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}StateProps => {\n    return {\n        // ...mapStateToProps\n    };\n};\n\nconst mapDispatchToProps = (dispatch: Dispatch<${3:any}>, ownProps: I${2:ComponentName}Props): I${1:ChildComponentName}DispatchProps => {\n    return {\n        // ...mapDispatchToProps\n    };\n};\n\nexport default connect(\n    mapStateToProps,\n    mapDispatchToProps,\n)(${1:ChildComponentName});"
-  },
-  "Typescript-React: typescript react redux template - separate component (2 spaces)": {
-    "prefix": "_tsrrcomp",
-    "body": "import React from 'react';\n\ninterface I${1:ComponentName}StateProps {}\n\ninterface I${1:ComponentName}DispatchProps {}\n\ninterface I${1:ComponentName}OtherProps {}\n\ntype I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps & I${1:ComponentName}OtherProps;\n\ninterface I${1:ComponentName}State {}\n\nclass ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {\n  public render() {\n    return (\n      ${2:<span>Body</span>}\n    );\n  }\n}\n\nexport default ${1:ComponentName};"
-  },
-  "Typescript-React: typescript react redux template - separate component (4 spaces)": {
-    "prefix": "_tsrrcomp4",
-    "body": "import React from 'react';\n\ninterface I${1:ComponentName}StateProps {}\n\ninterface I${1:ComponentName}DispatchProps {}\n\ninterface I${1:ComponentName}OtherProps {}\n\ntype I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps & I${1:ComponentName}OtherProps;\n\ninterface I${1:ComponentName}State {}\n\nclass ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {\n    public render() {\n        return (\n          ${2:<span>Body</span>}\n        );\n    }\n}\n\nexport default ${1:ComponentName};"
-  },
-  "Typescript-React: constructor (2 spaces)": {
+  "Typescript-React: constructor": {
     "prefix": "_con",
     "body": "constructor(props: I${1:ComponentName}Props) {\n  super(props);\n  ${2}\n}\n${3}"
   },
-  "Typescript-React: constructor (4 spaces)": {
-    "prefix": "_con4",
-    "body": "constructor(props: I${1:ComponentName}Props) {\n    super(props);\n    ${2}\n}\n${3}"
-  },
-  "Typescript-React: componentWillMount (2 spaces)": {
+  "Typescript-React: componentWillMount": {
     "prefix": "_cwm",
     "body": "public componentWillMount() {\n  ${1}\n}\n${2}"
   },
-  "Typescript-React: componentWillMount (4 spaces)": {
-    "prefix": "_cwm4",
-    "body": "public componentWillMount() {\n    ${1}\n}\n${2}"
-  },
-  "Typescript-React: componentDidMount (2 spaces)": {
+  "Typescript-React: componentDidMount": {
     "prefix": "_cdm",
     "body": "public componentDidMount() {\n  ${1}\n}\n${2}"
   },
-  "Typescript-React: componentDidMount (4 spaces)": {
-    "prefix": "_cdm4",
-    "body": "public componentDidMount() {\n    ${1}\n}\n${2}"
-  },
-  "Typescript-React: componentWillReceiveProps (2 spaces)": {
+  "Typescript-React: componentWillReceiveProps": {
     "prefix": "_cwr",
     "body": "public componentWillReceiveProps(nextProps: I${1:ComponentName}Props) {\n  ${2}\n}\n${3}"
   },
-  "Typescript-React: componentWillReceiveProps (4 spaces)": {
-    "prefix": "_cwr4",
-    "body": "public componentWillReceiveProps(nextProps: I${1:ComponentName}Props) {\n    ${2}\n}\n${3}"
-  },
-  "Typescript-React: shouldComponentUpdate (2 spaces)": {
+  "Typescript-React: shouldComponentUpdate": {
     "prefix": "_scup",
-    "body": "public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {\n  ${2}\n}\n${3}"
+    "body": "public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State): boolean {\n  ${2}\n  return true;\n}\n${3}"
   },
-  "Typescript-React: shouldComponentUpdate (4 spaces)": {
-    "prefix": "_scup4",
-    "body": "public shouldComponentUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {\n    ${2}\n}\n${3}"
-  },
-  "Typescript-React: componentWillUpdate (2 spaces)": {
+  "Typescript-React: componentWillUpdate": {
     "prefix": "_cwup",
     "body": "public componentWillUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {\n  ${2}\n}\n${3}"
   },
-  "Typescript-React: componentWillUpdate (4 spaces)": {
-    "prefix": "_cwup4",
-    "body": "public componentWillUpdate(nextProps: I${1:ComponentName}Props, nextState: I${1:ComponentName}State) {\n    ${2}\n}\n${3}"
-  },
-  "Typescript-React: componentDidUpdate (2 spaces)": {
+  "Typescript-React: componentDidUpdate": {
     "prefix": "_cdup",
     "body": "public componentDidUpdate(prevProps: I${1:ComponentName}Props, prevState: I${1:ComponentName}State) {\n  ${2}\n}\n${3}"
   },
-  "Typescript-React: componentDidUpdate (4 spaces)": {
-    "prefix": "_cdup4",
-    "body": "public componentDidUpdate(prevProps: I${1:ComponentName}Props, prevState: I${1:ComponentName}State) {\n    ${2}\n}\n${3}"
-  },
-  "Typescript-React: componentWillUnmount (2 spaces)": {
+  "Typescript-React: componentWillUnmount": {
     "prefix": "_cwun",
     "body": "public componentWillUnmount() {\n  ${1}\n}\n${2}"
-  },
-  "Typescript-React: componentWillUnmount (4 spaces)": {
-    "prefix": "_cwun4",
-    "body": "public componentWillUnmount() {\n    ${1}\n}\n${2}"
-  },
-  "Typescript-React: render (2 spaces)": {
-    "prefix": "_ren",
-    "body": "public render() {\n  return (\n    ${1:<span>Body</span>}\n  );\n}\n${2}"
-  },
-  "Typescript-React: render (4 spaces)": {
-    "prefix": "_ren4",
-    "body": "public render() {\n    return (\n      ${1:<span>Body</span>}\n    );\n}\n${2}"
   }
 }

@@ -19,15 +19,13 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
 
   interface I${1:ComponentName}State {}
 
-  class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+  export default class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
     public render() {
       return (
         ${2:<span>Body</span>}
       );
     }
   }
-
-  export default ${1:ComponentName};
   ```
 
 * **_tsrr** : typescript react redux template
@@ -43,11 +41,11 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
 
   interface I${1:ComponentName}DispatchProps {}
 
-  type I${1:ComponentName}ComponentProps = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;
+  type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;
 
-  interface I${1:ComponentName}ComponentState {}
+  interface I${1:ComponentName}State {}
 
-  class ${1:ComponentName}Component extends React.Component<I${1:ComponentName}ComponentProps, I${1:ComponentName}ComponentState> {
+  class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
     public render() {
       return (
         ${3:<span>Body</span>}
@@ -57,15 +55,15 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
 
   // Container
 
-  interface I${1:ComponentName}Props {}
+  interface I${1:ComponentName}OwnProps {}
 
-  const mapStateToProps = (state: ${2:IGlobalState}, ownProps: I${1:ComponentName}Props): I${1:ComponentName}StateProps => {
+  const mapStateToProps = (state: ${2:IGlobalState}, ownProps: I${1:ComponentName}OwnProps): I${1:ComponentName}StateProps => {
     return {
       // ...mapStateToProps
     };
   };
 
-  const mapDispatchToProps = (dispatch: Dispatch<AnyAction>, ownProps: I${1:ComponentName}Props): I${1:ComponentName}DispatchProps => {
+  const mapDispatchToProps = (dispatch: Dispatch<AnyAction>, ownProps: I${1:ComponentName}OwnProps): I${1:ComponentName}DispatchProps => {
     return {
       // ...mapDispatchToProps
     };
@@ -74,7 +72,7 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
   export default connect(
     mapStateToProps,
     mapDispatchToProps,
-  )(${1:ComponentName}Component);
+  )(${1:ComponentName});
   ```
 
 * **_con** : constructor

@@ -8,11 +8,11 @@ interface IComponentNameStateProps {}
 
 interface IComponentNameDispatchProps {}
 
-type IComponentNameComponentProps = IComponentNameStateProps & IComponentNameDispatchProps;
+type IComponentNameProps = IComponentNameStateProps & IComponentNameDispatchProps;
 
-interface IComponentNameComponentState {}
+interface IComponentNameState {}
 
-class ComponentNameComponent extends React.Component<IComponentNameComponentProps, IComponentNameComponentState> {
+class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
   public render() {
     return (
       <span>Body</span>
@@ -22,15 +22,15 @@ class ComponentNameComponent extends React.Component<IComponentNameComponentProp
 
 // Container
 
-interface IComponentNameProps {}
+interface IComponentNameOwnProps {}
 
-const mapStateToProps = (state: any, ownProps: IComponentNameProps): IComponentNameStateProps => {
+const mapStateToProps = (state: any, ownProps: IComponentNameOwnProps): IComponentNameStateProps => {
   return {
     // ...mapStateToProps
   };
 };
 
-const mapDispatchToProps = (dispatch: Dispatch<AnyAction>, ownProps: IComponentNameProps): IComponentNameDispatchProps => {
+const mapDispatchToProps = (dispatch: Dispatch<AnyAction>, ownProps: IComponentNameOwnProps): IComponentNameDispatchProps => {
   return {
     // ...mapDispatchToProps
   };
@@ -39,4 +39,4 @@ const mapDispatchToProps = (dispatch: Dispatch<AnyAction>, ownProps: IComponentN
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ComponentNameComponent);
+)(ComponentName);

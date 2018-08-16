@@ -15,9 +15,9 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
   ```tsx
   import * as React from 'react';
 
-  interface I${1:ComponentName}Props {}
+  interface I${1:ComponentName}Props { }
 
-  interface I${1:ComponentName}State {}
+  interface I${1:ComponentName}State { }
 
   export default class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
     public render() {
@@ -37,13 +37,13 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
 
   // Component
 
-  interface I${1:ComponentName}StateProps {}
+  interface I${1:ComponentName}StateProps { }
 
-  interface I${1:ComponentName}DispatchProps {}
+  interface I${1:ComponentName}DispatchProps { }
 
-  type I${1:ComponentName}Props = I${1:ComponentName}StateProps & I${1:ComponentName}DispatchProps;
+  interface I${1:ComponentName}Props extends I${1:ComponentName}StateProps, I${1:ComponentName}DispatchProps { }
 
-  interface I${1:ComponentName}State {}
+  interface I${1:ComponentName}State { }
 
   class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
     public render() {
@@ -55,7 +55,7 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
 
   // Container
 
-  interface I${1:ComponentName}OwnProps {}
+  interface I${1:ComponentName}OwnProps { }
 
   const mapStateToProps = (state: ${2:IGlobalState}, ownProps: I${1:ComponentName}OwnProps): I${1:ComponentName}StateProps => {
     return {
@@ -73,6 +73,71 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
     mapStateToProps,
     mapDispatchToProps,
   )(${1:ComponentName});
+  ```
+
+* **_tsrri** : typescript react redux template with i18n support
+
+  ```tsx
+  import * as React from 'react';
+  import { InjectedI18nProps, InjectedTranslateProps, translate } from 'react-i18next';
+  import { connect } from 'react-redux';
+  import { AnyAction, Dispatch } from 'redux';
+
+  import i18ns from './i18n';
+
+  // Component
+
+  interface I${1:ComponentName}StateProps { }
+
+  interface I${1:ComponentName}DispatchProps { }
+
+  interface I${1:ComponentName}Props extends I${1:ComponentName}StateProps, I${1:ComponentName}DispatchProps, InjectedI18nProps, InjectedTranslateProps { }
+
+  interface I${1:ComponentName}State { }
+
+  class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+    constructor(props: I${1:ComponentName}Props) {
+      super(props);
+      this.loadI18ns();
+    }
+
+    public loadI18ns() {
+      const { i18n } = this.props;
+      for (const key in i18ns) {
+        if (i18ns.hasOwnProperty(key)) {
+          i18n.addResourceBundle(key, '${1:ComponentName}', i18ns[key]);
+        }
+      }
+    }
+
+    public render() {
+      const { t } = this.props;
+      return (
+        ${3:<span>{t('text')\\}</span>}
+      );
+    }
+  }
+
+  // Container
+
+  interface I${1:ComponentName}OwnProps { }
+
+  const mapStateToProps = (state: ${2:IGlobalState}, ownProps: I${1:ComponentName}OwnProps): I${1:ComponentName}StateProps => {
+    return {
+      // ...mapStateToProps
+    };
+  };
+
+  const mapDispatchToProps = (dispatch: Dispatch<AnyAction>, ownProps: I${1:ComponentName}OwnProps): I${1:ComponentName}DispatchProps => {
+    return {
+      // ...mapDispatchToProps
+    };
+  };
+
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  )(translate('${1:ComponentName}')(${1:ComponentName}));
   ```
 
 * **_con** : constructor

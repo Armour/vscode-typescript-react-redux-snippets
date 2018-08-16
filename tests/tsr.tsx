@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-interface IComponentNameProps {}
+interface IComponentNameProps { }
 
-interface IComponentNameState {}
+interface IComponentNameState { }
 
 export default class ComponentName extends React.Component<IComponentNameProps, IComponentNameState> {
   public render() {

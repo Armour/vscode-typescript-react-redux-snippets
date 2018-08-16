@@ -1,6 +1,6 @@
 {
     "name": "vscode-typescript-react-redux-snippets",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Typescript React Redux snippets (follow ES6 standard)",
     "publisher": "chong",
     "categories": [

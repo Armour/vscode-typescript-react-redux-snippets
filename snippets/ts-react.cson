@@ -33,7 +33,7 @@
 
     interface I${1:ComponentName}State { }
 
-    class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+    export class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
       public render() {
         return (
           ${3:<span>Body</span>}
@@ -83,7 +83,7 @@
 
     interface I${1:ComponentName}State { }
 
-    class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+    export class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
       constructor(props: I${1:ComponentName}Props) {
         super(props);
         this.loadI18ns();

@@ -45,7 +45,7 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
 
   interface I${1:ComponentName}State { }
 
-  class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+  export class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
     public render() {
       return (
         ${3:<span>Body</span>}
@@ -95,7 +95,7 @@ Typescript, React and Redux snippets for VSCode (followed ES6 standard)
 
   interface I${1:ComponentName}State { }
 
-  class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
+  export class ${1:ComponentName} extends React.Component<I${1:ComponentName}Props, I${1:ComponentName}State> {
     constructor(props: I${1:ComponentName}Props) {
       super(props);
       this.loadI18ns();
@@ -231,6 +231,10 @@ cd vscode-typescript-react-redux-snippets
 ```
 
 This will load our snippets each time VS Code runs
+
+## Used projects
+
+* [Armour/express-webpack-react-redux-typescript-boilerplate](https://github.com/Armour/express-webpack-react-redux-typescript-boilerplate)
 
 ## Contributing
 
